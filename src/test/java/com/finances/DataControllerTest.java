@@ -24,24 +24,24 @@ public class DataControllerTest {
     private DataController dataController;
 
     @BeforeEach
-    public void setUp() {
+    void setUp() {
         dataController = new DataController();
     }
 
     @Test
-    public void testHealthCheck() {
+    void testHealthCheck() {
         String result = dataController.healthCheck();
         assertEquals("HEALTH CHECK OK!", result);
     }
 
     @Test
-    public void testVersion() {
+    void testVersion() {
         String result = dataController.version();
         assertEquals("The actual version is 1.0.0", result);
     }
 
     @Test
-    public void testGetRandomNations() throws Exception {
+    void testGetRandomNations() throws Exception {
         JsonNode result = dataController.getRandomNations();
         assertNotNull(result);
         assertEquals(10, result.size());
@@ -56,7 +56,7 @@ public class DataControllerTest {
     }
 
     @Test
-    public void testGetRandomCurrencies() throws Exception {
+    void testGetRandomCurrencies() throws Exception {
         JsonNode result = dataController.getRandomCurrencies();
         assertNotNull(result);
         assertEquals(20, result.size());
