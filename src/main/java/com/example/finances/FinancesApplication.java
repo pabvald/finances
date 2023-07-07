@@ -1,6 +1,6 @@
-package com.finances;
+package com.example.finances;
 
-/* Spring Boot Dependencies */
+/* Spring Dependencies */
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
